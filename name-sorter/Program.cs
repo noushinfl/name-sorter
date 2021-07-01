@@ -2,6 +2,7 @@
 /// <summary>
 ///The goal is to provide a c# solution for a Name Sorter.
 ///Author : Nooshin Sichani
+///Date   : 01/07/2021
 /// <summary>
 using System;
 using System.IO;
