@@ -50,7 +50,9 @@ namespace name_sorter
         /// </summary>
         public static PersonName Parse(String unformattedName)
         {
-            if (unformattedName == null || unformattedName.Length < 2)
+            if (unformattedName == null 
+                || unformattedName.Length < 2 
+                || unformattedName.LastIndexOf(" ") <= 0)
                 throw new InvalidPersonNameException(unformattedName);
 
             var surname = unformattedName.Substring(unformattedName.LastIndexOf(" ") + 1);
