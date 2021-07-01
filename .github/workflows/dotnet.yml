@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet: [ '5.0.x' ]
+        dotnet: [ '3.0', '3.1.x', '5.0.x' ]
       
     steps:
     - uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ${{ matrix.dotnet-version }}
     - name: Build
       run: dotnet build --no-restore
     - name: Test
