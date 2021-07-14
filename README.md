@@ -7,7 +7,7 @@ A person must have at least one given name and up to 3 given names.
 
 # How did I apply SOLID Concept in my solution
 
-Single Responsibility
+##Single Responsibility
   Each class has a specific responsibility. 
   PersonNameCreator class specifically to parse a string into a PersonName object.
   In my previous solution, this was a static method in PersonName class
