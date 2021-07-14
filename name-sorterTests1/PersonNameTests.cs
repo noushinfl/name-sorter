@@ -11,12 +11,13 @@ namespace name_sorter.Tests
     [TestClass()]
     public class PersonNameTests
     {
+        PersonNameCreator creator = new PersonNameCreator();
         [TestMethod()]
         public void One_Givenname_and_a_Surname_Parses_to_PersonName()
         {
             try
             {
-                PersonName.Parse("Nooshin Sichani");
+                creator.Create("Nooshin Sichani");
             }
  
             catch
@@ -29,7 +30,7 @@ namespace name_sorter.Tests
         {
             try
             {
-                PersonName.Parse("Nooshin Sichani");
+                creator.Create("Nooshin Fallahpour Sichani");
             }
 
             catch
@@ -42,7 +43,7 @@ namespace name_sorter.Tests
         {
             try
             {
-                PersonName.Parse("N S");
+                creator.Create("N S");
             }
 
             catch
@@ -55,7 +56,7 @@ namespace name_sorter.Tests
         {
             try
             {
-                PersonName.Parse("Nooshin");
+                creator.Create("Nooshin");
                 Assert.Fail();
             }
 
@@ -66,7 +67,7 @@ namespace name_sorter.Tests
         {
             try
             {
-                PersonName.Parse("Nooshin Fallahpour Sichani Yazdi");
+                creator.Create("Nooshin Fallahpour Sichani Yazdi");
                 Assert.Fail();
             }
 
